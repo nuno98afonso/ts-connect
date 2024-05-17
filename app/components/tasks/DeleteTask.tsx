@@ -11,7 +11,7 @@ export default function DeleteTaskButton({ taskId }: DeleteTaskButtonProps): JSX
 
     async function handleClick(): Promise<void> {
         try {
-            await fetch(`/api/task/${taskId}`, {
+            await fetch(`/api/delete-task/${taskId}`, {
                 method: 'DELETE'
             });
             router.refresh();

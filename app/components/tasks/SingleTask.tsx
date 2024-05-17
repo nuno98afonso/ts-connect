@@ -1,4 +1,5 @@
 import DeleteTaskButton from "./DeleteTask";
+import EditButton from "./EditTask";
 
 type TaskProps = {
   id: string;
@@ -11,6 +12,7 @@ export default function Task({ id, description, authorName }: TaskProps) {
     <div>
       <h2>{description || "No description available"}</h2>
       <p>Author: {authorName || "Anonymous"}</p>
+      <EditButton taskId={id}/>
       <DeleteTaskButton taskId={id}/>
     </div>
   );
