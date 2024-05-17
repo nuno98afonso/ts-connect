@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Task from './components/Task';
+import Task from './components/tasks/SingleTask';
 import styles from './page.module.css';
 import prisma from '../lib/prisma';
 
@@ -29,7 +29,7 @@ export default async function Home() {
   const tasks = await getTasks();
   return (
     <main className={styles.main}>
-      <Link href={'/add-task'}>Add Task</Link>
+      <Link href={'/TaskDetail'}>Add Task</Link>
       <h1>Task Feed</h1>
       {tasks.map((task) => (
         <Task

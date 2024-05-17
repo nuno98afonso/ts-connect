@@ -1,4 +1,4 @@
-// components/Task.tsx
+import DeleteTaskButton from "./DeleteTask";
 
 type TaskProps = {
   id: string;
@@ -11,6 +11,7 @@ export default function Task({ id, description, authorName }: TaskProps) {
     <div>
       <h2>{description || "No description available"}</h2>
       <p>Author: {authorName || "Anonymous"}</p>
+      <DeleteTaskButton taskId={id}/>
     </div>
   );
 }
