@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 
-export default function UpdateTask({ taskId }: { taskId: string }) { // Add taskId prop
+export function UpdateTask({ taskId }: { taskId: string }) { // Add taskId prop
 
   const [description, setDescription] = useState<string>('');
   const router = useRouter();
